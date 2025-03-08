@@ -1,11 +1,11 @@
 def map_character_frequency(words):
-    char_map = {}
-    for word in words:
-        for character in word:
+    char_map = {}   #* replaced ']' with '}'
+    for word in words:    #* removed ()
+        for character in word:    #* replaced 'on' with 'in'
             if character not in char_map:
-                char_map[character] = 1
-            else:
-                char_map[character] += 1
+                char_map[character] = 1    #* replaced '{}' with '[]'
+            else:    #* corrected indentation (brought into scope with 'if')
+                char_map[character] += 1    #* replaced '()' with '[]'
     return char_map
 
 def test_map_character_frequency():
@@ -25,10 +25,10 @@ def test_map_character_frequency():
 def syntax_errors():
     test_map_character_frequency()
 
-#! Changes made:
+#! Change List:
 #* Line 2 - replaced ']' with '}'
 #* Line 3 - removed '()' enclosing "word in words"
 #* Line 4 - replaced "on" with "in"
-#* Line 7 - indented else two spaces to the right
 #* Line 6 - replaced '{}' with '[]'
+#* Line 7 - indented else two spaces to the right
 #* Line 8 - replaced '()' with '[]'
